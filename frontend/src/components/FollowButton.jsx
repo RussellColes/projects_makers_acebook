@@ -33,7 +33,7 @@ function FollowButton({ username, following, setFollowing }) {
 
     return (
         <>
-            <button onClick={handleFollow}>{following ? "Unfollow" : "Follow"}</button>
+            <button className="edit-button" onClick={handleFollow}>{following ? "Unfollow" : "Follow"}</button>
 
         </>
 

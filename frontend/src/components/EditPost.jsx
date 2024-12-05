@@ -37,7 +37,7 @@ export function EditPost({ handleReloadPosts , message, postId, handleStartEditi
         <>
                 <label htmlFor="postContent">Enter Updated Post Content</label>
                 <input type="text" id="postContent" name="postContent" value={postContent} onChange={handlePostContent}></input>
-                <button type="button" onClick={submitContent}>Submit Edit</button>
+                <button className="submit-button" type="button" onClick={submitContent}>Submit Edit</button>
         </>
     )
 }

@@ -62,9 +62,10 @@ export function OtherProfile() {
             <PhotoDisplay photoFilePath={photoFilePath}/>
             <UserDetails username={username} name={name} myProfile={myProfile}/>
             {myProfile ? <PhotoUpload triggerPhotoLoad={triggerPhotoLoad}/> : <p></p>}
+            {myProfile ? <p></p> : <FollowButton username={username} following={following} setFollowing={setFollowing}/>}
             </div>
             <br></br>
-            {myProfile ? <p></p> : <FollowButton username={username} following={following} setFollowing={setFollowing}/>}
+            
             {following ? <Feed allowPosting={myProfile} getMethod={getPostsForUser} username={username} photoLoad={photoLoad}/> : <></>}
             </div>
             <div className="grid-item">
