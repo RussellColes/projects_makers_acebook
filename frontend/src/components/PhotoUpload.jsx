@@ -5,7 +5,7 @@ import axios from "axios";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
-export function PhotoUpload({ triggerPhotoLoad}) {
+export function PhotoUpload({ triggerPhotoLoad }) {
   const [photo, setPhoto] = useState(null);
 
   // const [allPhoto, setAllPhoto] = useState();
