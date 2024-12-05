@@ -220,12 +220,22 @@ input::placeholder {
 
 .input-button {
     width: 50%;
+.home-page-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.home-page-submit-button {
+    margin-left: 38.5%;
+    width: 20%;
     padding: 14px;
     background-color: #34948c;
     color: #fff;
     border: none;
     border-radius: 8px;
+
     font-size: 1em;
+
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;

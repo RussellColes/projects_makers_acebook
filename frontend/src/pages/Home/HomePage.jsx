@@ -6,9 +6,9 @@ export function HomePage() {
   return (
     <div className="home">
       <NavBar />
-      <h1>Welcome to Acebook!</h1>
-      <Link to="/signup">Sign Up</Link>
-      <Link to="/login">Log In</Link>
+      <h1 className="home-page-header">Welcome to Acebook!</h1>
+      <Link className="home-page-submit-button" to="/signup">Sign Up</Link>
+      <Link className="home-page-submit-button" to="/login">Log In</Link>
     </div>
   );
 }
