@@ -230,6 +230,26 @@ input::placeholder {
     color: #999; /* Light gray color for the placeholder */
 }
 
+.home-page-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.home-page-submit-button {
+    margin-left: 38.5%;
+    width: 20%;
+    padding: 14px;
+    background-color: #34948c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 100;
+}
+
 .submit-button {
     width: 100%;
     padding: 14px;
