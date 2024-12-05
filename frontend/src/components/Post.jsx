@@ -4,6 +4,7 @@ import { VscHeart } from "react-icons/vsc";
 import { VscHeartFilled } from "react-icons/vsc";
 import { ImBin } from "react-icons/im";
 import { EditPost } from "./EditPost";
+import { MdOutlineEdit } from "react-icons/md";
 
 import "../pages/CSS.css"
 // import "../pages/Post.css"
@@ -107,19 +108,16 @@ function Post(props) {
 
       <br></br>
 {/* like button */}
-      <a onClick={handleLike}>{isLiked ? <VscHeartFilled /> : <VscHeart />}</a>
+      <a onClick={handleLike}>{isLiked ? <VscHeartFilled size="1.8rem"/> : <VscHeart size="1.8rem" />}</a>
 
 {/* like count */}
     <p>{likeCount} Likes</p>
-      {isOwnPost && (
-      <a onClick={handleDelete}><ImBin className="bin-icon" /></a>
-      )}
 
 <br></br>
 
 {/* edit post */}
     {isOwnPost && (
-      <button onClick={handleStartEditing}>Edit Post</button>
+      <button className="edit-button"onClick={handleStartEditing}><MdOutlineEdit className="edit-icon" size="1.8rem"/></button>
     )}
     {isEditing && (
       <EditPost handleReloadPosts={props.handleReloadPosts} message={props.post.message} postId={props.post._id} handleStartEditing={handleStartEditing}/>
@@ -128,7 +126,7 @@ function Post(props) {
 
 
     {isOwnPost && (
-      <a onClick={handleDelete}><ImBin className="bin-icon" size="20px"/></a>
+      <button className="edit-button" onClick={handleDelete}><ImBin className="bin-icon" size="1.8rem"/></button>
     )}
   </div>
   </div>

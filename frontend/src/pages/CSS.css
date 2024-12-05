@@ -257,6 +257,23 @@ input::placeholder {
     font-weight: 100;
 }
 
+.edit-button {
+    width: 20%;
+    padding: 4px;
+    /* background-color: #bdbdbd; */
+    background-color: #ababab;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: 100;
+}
+
 .submit-button:hover {
     background-color: #195786;
 }
@@ -267,6 +284,13 @@ input::placeholder {
 
 .bin-icon:hover{
     color: #ab2929;
+}
+
+.edit-icon:hover{
+    color: #ffffff;
+}
+.edit-icon:hover{
+    color: #e0e0e0;
 }
 
 .user-item {
