@@ -40,7 +40,6 @@ function Feed({allowPosting, getMethod, username, photoLoad}) {
         <body>
             {allowPosting ? <NewPost handleReloadPosts={handleReloadPosts} /> : <></>}
             <br></br>
-            <br></br>
             <PostList posts={posts} handleReloadPosts={handleReloadPosts} />
             </body>
         </>

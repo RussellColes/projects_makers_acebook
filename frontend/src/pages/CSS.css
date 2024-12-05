@@ -121,6 +121,7 @@ h2 {
     /* justify-content: center; */
     /* align-content: center; */
     margin: 0, auto;
+    margin-bottom: 20px;
     gap: 20px;
 }
 
