@@ -77,62 +77,64 @@ function Post(props) {
 
 
   return (
+    <div className="post-card">
     <div key={props.post._id}>
       {/* <p>
         <small>Posted on: {date ? date.toLocaleString("en-GB") : "Unknown Date"}</small>
       </p> */}
 
-      <div className="post-card">
-        <div>
-
-    <div className="profile-section">
-      <div className="profile-photo">
+<div className="grid-container-post">
+  <div className="grid-item">
+{/* image */}
       <img 
-              className="post-image" 
-              src={`${BACKEND_URL}/${props.post.filePath}`} 
-              width="50">
-          </img>
-      </div>
-      <h2 className="user-name">
-      <Link 
-                className="other-profile-link div-1" 
-                to={`/profile/${props.post.username}`}>{props.post.firstName} {props.post.lastName}
-            </Link>
-        </h2>
-    </div>
-    <div className="post-content">
+        className="post-image" 
+        src={`${BACKEND_URL}/${props.post.filePath}`} 
+        width="50">
+      </img>
+      {/* user name link */}
+      <h2><Link 
+        className="other-profile-link" 
+        to={`/profile/${props.post.username}`}>{props.post.firstName} {props.post.lastName}
+      </Link></h2>
+</div>
+<div className="grid-item">
+
+{/* photo upload */}
+{props.post.photoFilePath ? <img className="image-as-post" src={`${BACKEND_URL}/${props.post.photoFilePath}`} width="300"></img> : <></>}
+
+{/* message */}
       <p>{props.post.message}</p>
-    </div>
-    <div>
-      <div className="like-button"><a onClick={handleLike}>{isLiked ? <VscHeartFilled /> : <VscHeart />
-            }</a>
 
+      <br></br>
+{/* like button */}
+      <a onClick={handleLike}>{isLiked ? <VscHeartFilled /> : <VscHeart />}</a>
+
+{/* like count */}
     <p>{likeCount} Likes</p>
-          </div>
-          <div>
-            {isOwnPost && (
-              <a onClick={handleDelete}><ImBin className="bin-icon" /></a>
-            )}
+      {isOwnPost && (
+      <a onClick={handleDelete}><ImBin className="bin-icon" /></a>
+      )}
 
-            {isOwnPost && (
-              <button onClick={handleStartEditing}>Edit Post</button>
-            )}
-            {isEditing && (
-              <EditPost handleReloadPosts={props.handleReloadPosts} message={props.post.message} postId={props.post._id} handleStartEditing={handleStartEditing}/>
-            )}
+<br></br>
+
+{/* edit post */}
+    {isOwnPost && (
+      <button onClick={handleStartEditing}>Edit Post</button>
+    )}
+    {isEditing && (
+      <EditPost handleReloadPosts={props.handleReloadPosts} message={props.post.message} postId={props.post._id} handleStartEditing={handleStartEditing}/>
+    )}
             
 
-          {props.post.photoFilePath ? <img className="image" src={`${BACKEND_URL}/${props.post.photoFilePath}`} width="300"></img> : <></>}
 
-          </div>
-        </div>
-      </div>
-      <div>{isOwnPost && (
-              <a onClick={handleDelete}><ImBin className="bin-icon" /></a>
-            )}</div>
-    </div>
+    {isOwnPost && (
+      <a onClick={handleDelete}><ImBin className="bin-icon" /></a>
+    )}
+  </div>
+  </div>
 
-        </div>
+  </div>
+  </div>
   );
 }
 

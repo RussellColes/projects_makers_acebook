@@ -72,9 +72,9 @@ const fileInputRef = useRef(null);
         <div className="post-card">
         <label htmlFor="postContent">Enter Post Content</label>
         <input type="text" id="postContent" name="postContent" value={postContent} onChange={handlePostContent}></input>
-        <form onSubmit={submitPhoto}>
+        <form  onSubmit={submitPhoto}>
             <label htmlFor="image">Upload Photo</label>
-            <input
+            <input 
                 id="image"
                 type="file"
                 accept="image/*"

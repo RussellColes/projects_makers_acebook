@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 // import { getPosts } from "../services/posts";
 import { PostList } from "./PostList";
 import { NewPost } from "./NewPost";
-import { UserList } from "./UserList";
 
 function Feed({allowPosting, getMethod, username, photoLoad}) {
     const [posts, setPosts] = useState([]);
@@ -38,14 +37,11 @@ function Feed({allowPosting, getMethod, username, photoLoad}) {
 
     return (
         <>
-        <body className="grid-container-1">
-        <div className="grid-container-2">
+        <body>
             {allowPosting ? <NewPost handleReloadPosts={handleReloadPosts} /> : <></>}
-        </div>
-            <div>
+            <br></br>
+            <br></br>
             <PostList posts={posts} handleReloadPosts={handleReloadPosts} />
-            <UserList />
-            </div>
             </body>
         </>
     );

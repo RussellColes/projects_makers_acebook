@@ -10,6 +10,7 @@ import { PhotoUpload } from "../../components/PhotoUpload";
 import Feed from "../../components/Feed";
 import { getPostsForUser } from "../../services/posts";
 import  FollowButton from "../../components/FollowButton";
+import { UserList } from "../../components/UserList";
 
 
 
@@ -54,15 +55,24 @@ export function OtherProfile() {
         <>
         <NavBar />
         {/* <body> */}
-        <div className="Profile">
-            <h1>Profile page</h1>
+        <div className="feed-padding">
+        <div className="grid-container">
+            <div className="grid-item">
+                <div className="post-card">
             <PhotoDisplay photoFilePath={photoFilePath}/>
             <UserDetails username={username} name={name} myProfile={myProfile}/>
             {myProfile ? <PhotoUpload triggerPhotoLoad={triggerPhotoLoad}/> : <p></p>}
+            </div>
+            <br></br>
             {myProfile ? <p></p> : <FollowButton username={username} following={following} setFollowing={setFollowing}/>}
             {following ? <Feed allowPosting={myProfile} getMethod={getPostsForUser} username={username} photoLoad={photoLoad}/> : <></>}
+            </div>
+            <div className="grid-item">
+                <UserList />
+            </div>
             {/* <PhotoDisplay photoLoad={photoLoad}/> */}
             {/* <OtherUserDetails /> */}
+        </div>
         </div>
         {/* </body> */}
         </>
