@@ -3,6 +3,7 @@ import { MyUserDetails } from "../../components/MyUserDetails";
 import { PhotoUpload } from "../../components/PhotoUpload";
 import { PhotoDisplay } from "../../components/PhotoDisplay";
 import { useState } from "react";
+import { UserList } from "../../components/UserList";
 import "../CSS.css"
 
 export function Profile() {
@@ -18,27 +19,22 @@ export function Profile() {
   return (
     <>
       <NavBar />
-      <body>
-      <div className="Profile">
-        <div className="container">
-          <div className="column left">
+      <div className="grid-container">
+        <div className="grid-item">
           <PhotoDisplay
           photoLoad={photoLoad}
           showDefaultImage={showDefaultImage}
           />
-          </div>
-          <div className="column right">
           <h1><MyUserDetails /></h1> 
-          </div>
-        </div>
-        <div className="container">
         <PhotoUpload
           triggerPhotoLoad={triggerPhotoLoad}
           setShowDefaultImage={setShowDefaultImage}
         />
         </div>
-      </div>  
-      </body>
+        <div className="grid-item">
+        <UserList />
+        </div>
+        </div>
     </>
   );
 }

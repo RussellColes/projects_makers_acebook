@@ -37,11 +37,12 @@ export function UserList() {
         {users.length > 0 ? (
             users.map(user => (
                 <div key={user._id} className="user-item">
+                    <img className="user-list-photo" src={`${BACKEND_URL}/${user.filePath}`} width="50"></img>
                         <Link 
                 className="other-profile-link" 
                 to={`/profile/${user.username}`}>{user.firstName} {user.lastName}
             </Link>  
-            <img className="userlistimage" src={`${BACKEND_URL}/${user.filePath}`} width="50"></img>
+            
                     </div>
                 ))
             ) : (

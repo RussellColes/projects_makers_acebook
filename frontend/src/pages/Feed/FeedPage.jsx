@@ -1,6 +1,8 @@
 import { NavBar } from "../../components/NavBar";
 import Feed from "../../components/Feed";
 import { getPosts } from "../../services/posts";
+import { UserList } from "../../components/UserList";
+
 export function FeedPage() {
   // const [posts, setPosts] = useState([]);
   // const [reloadPosts, setReloadPosts] = useState(false);
@@ -35,8 +37,17 @@ export function FeedPage() {
 
   return (
     <>
-    <NavBar />  
+    <NavBar />
+    <div className="feed-padding">
+    <div className="grid-container">
+      <div className="grid-item">
       <Feed allowPosting={true} getMethod={getPosts}/>
+      </div>
+      <div className="grid-item">
+      <UserList />
+      </div>
+    </div>
+    </div>   
     </>
   );
 }

@@ -8,8 +8,33 @@
     padding: 10px;
 }
 
+.feed-padding {
+    margin: 0 100px;
+}
+
 body{
     background-color: rgb(227, 232, 237);
+}
+
+.profile-body {
+    margin: 200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;  /* First column takes 1 fraction, second column takes 2 fractions */
+    gap: 20px;  /* Optional: Adds space between grid items */
+}
+
+.grid-item {
+    padding: 20px;
+    justify-content: center;
+}
+
+.grid-container-post {
+    display: grid;
+    grid-template-columns: 1fr 2fr;  /* First column takes 1 fraction, second column takes 2 fractions */
+    gap: 20px;  /* Optional: Adds space between grid items */
 }
 
 .grid-container-1 {
@@ -17,29 +42,12 @@ body{
     display: grid;
     margin: 0 0;
     grid-template-columns: repeat(auto-fit, 50% );
-    /* border: 1px solid red; */
-    /* grid-template-columns: repeat(auto-fit, 33% ); */
-    /* gap: 10px; */
-    /* justify-content: center; */
-    /* align-content: center; */
 }
 
 .grid-container-2 {
-    /* border: 3px solid red; */
     grid-template-columns: repeat(auto-fit, 2);
     height: 100vh;
-    /* margin: 0 auto; */
-    /* background-color: #c6b2b2; */
-    /* padding: min(50px, 7%); */
-    /* min-height: 800px;
-    max-width: 75%;
-    /* border: 4px solid black; */
-    /* display: flex; */
-    /* gap: 20px; */
-    /* /* column-gap: 10px; */
-    /* row-gap: 40px; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
+
     align-items: center;
     align-content: center;
     margin: 0 0;
@@ -47,18 +55,6 @@ body{
 
 .grid-container-3 {
     grid-template-columns: repeat(auto-fit, 2);
-    /* margin: 0 auto; */
-    /* background-color: #c6b2b2; */
-    /* padding: min(50px, 7%); */
-    /* min-height: 800px;
-    max-width: 75%;
-    /* border: 4px solid black; */
-    /* display: flex; */
-    /* gap: 20px; */
-    /* /* column-gap: 10px; */
-    /* row-gap: 40px; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     align-items: center;
     align-content: center;
     margin: 0 20%;
@@ -66,20 +62,7 @@ body{
 }
 
 .grid-container-4 {
-    /* grid-template-columns: repeat(auto-fit, 2); */
-    /* margin: 0 auto; */
-    /* background-color: #c6b2b2; */
-    /* padding: min(50px, 7%); */
-    /* min-height: 800px;
-    max-width: 75%;
-    /* border: 4px solid black; */
     display: flex;
-    /* flex-direction: column; */
-    /* gap: 20px; */
-    /* /* column-gap: 10px; */
-    /* row-gap: 40px; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     text-align: left;
     align-items: center;
     align-content: center;
@@ -96,7 +79,6 @@ body{
 
 .login-photo {
     width: 100%;
-    /* border-radius: 8px; */
     height: 100vh;
     object-fit: cover;
     object-position: bottom;
@@ -117,14 +99,6 @@ h2 {
     padding-top:  20px;;
 }
 
-/* .inner-container {
-    padding: 20px;
-} */
-/* .container {
-    max-width: 800px;
-    margin: 0 auto;
-} */
-
 
 .card {
     border: 2px solid red;
@@ -134,33 +108,33 @@ h2 {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* text-align: center; */
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .post-card {
     padding: 1em;
-    width: 75%;
+    width: 100%;
     border: 0.5px solid #c9c5de;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* text-align: center; */
-    justify-content: center;
-    align-content: center;
+    /* justify-content: center; */
+    /* align-content: center; */
     margin: 0, auto;
+    gap: 20px;
 }
+
 
 .post-card-2 {
     padding: 1em;
-    width: 50%;
+    width: 100%;
     border: 0.5px solid #c9c5de;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
-    justify-content: center;
-    align-content: center;
+    /* justify-content: center; */
+    /* align-content: center; */
     margin: 0, auto;
 }
 
@@ -169,6 +143,20 @@ h2 {
     height: 100px;
     border-radius: 360px;
     object-fit: cover;
+}
+
+.image-as-post {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.user-list-photo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 .box {
@@ -230,6 +218,20 @@ input::placeholder {
     color: #999; /* Light gray color for the placeholder */
 }
 
+.input-button {
+    width: 50%;
+    padding: 14px;
+    background-color: #34948c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 100;
+}
+
 .submit-button {
     width: 100%;
     padding: 14px;
@@ -237,7 +239,7 @@ input::placeholder {
     color: #fff;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
