@@ -19,8 +19,10 @@ export function Profile() {
   return (
     <>
       <NavBar />
+
       <div className="grid-container">
         <div className="grid-item">
+
           <PhotoDisplay
           photoLoad={photoLoad}
           showDefaultImage={showDefaultImage}
@@ -31,10 +33,12 @@ export function Profile() {
           setShowDefaultImage={setShowDefaultImage}
         />
         </div>
+
         <div className="grid-item">
         <UserList />
         </div>
         </div>
+
     </>
   );
 }
