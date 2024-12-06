@@ -29,11 +29,10 @@ function FollowButton({ username, following, setFollowing }) {
         }
 
 
-// CHANGED ONCLICK TO NULL TO PREVENT ERROR
 
     return (
         <>
-            <button onClick={handleFollow}>{following ? "Unfollow" : "Follow"}</button>
+            <button className="edit-button" onClick={handleFollow}>{following ? "Unfollow" : "Follow"}</button>
 
         </>
 

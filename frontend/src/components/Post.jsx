@@ -119,15 +119,16 @@ function Post(props) {
     {isOwnPost && (
       <button className="edit-button"onClick={handleStartEditing}><MdOutlineEdit className="edit-icon" size="1.8rem"/></button>
     )}
+    {isOwnPost && (
+      <button className="edit-button" onClick={handleDelete}><ImBin className="bin-icon" size="1.8rem"/></button>
+    )}
     {isEditing && (
       <EditPost handleReloadPosts={props.handleReloadPosts} message={props.post.message} postId={props.post._id} handleStartEditing={handleStartEditing}/>
     )}
             
 
 
-    {isOwnPost && (
-      <button className="edit-button" onClick={handleDelete}><ImBin className="bin-icon" size="1.8rem"/></button>
-    )}
+    
   </div>
   </div>
 
