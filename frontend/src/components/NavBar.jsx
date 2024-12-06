@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import LogoutButton from "./LogoutButton";
+
 import acebook_logo from "../assets/acebook_logo.png";
 import { getMyUsername } from "../services/users.js";
 import { useState, useEffect } from "react";
@@ -22,15 +23,11 @@ export function NavBar() {
     return(
         <>
         <nav className="navbar">
-            <div className="navbar-left">
             <img width="140rem" height="70rem" src={acebook_logo}></img>
-            </div>
             {/* The line below will only show the profile link if the username is not an empty string */}
-            <div className="navbar-right">
             {username !== "" && (<Link className="nav-link" to={`/profile/${username}`}>Profile</Link>)}
             {username !== "" && (<Link className="nav-link" to="/posts">Feed</Link>)}
             {username !== "" && <LogoutButton/>}
-            </div>
         </nav>
         </>
     );
