@@ -25,7 +25,7 @@ export function SignupPage() {
   async function handleSubmit(event) {
     event.preventDefault();
     // Validation to avoid empty fields
-    if (!firstName || !lastName || !email || !password || !username) {
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !password.trim() || !username.trim()) {
       alert("You must enter something in every field");
       return; // Prevent form submission if any field is empty
         }
