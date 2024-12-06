@@ -4,15 +4,28 @@
 
 .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #34948c;
-    /* align-items: center; */
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:20px;
+    padding: 20px;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
