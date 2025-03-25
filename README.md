@@ -1,4 +1,8 @@
 # Acebook Project - Replicating some features of Facebook #
+
+## Tech Stack ##
+![JavaScript](https://img.shields.io/badge/JavaScript-EFD81B?style=for-the-badge&logo=javascript&logoColor=black) ![Jest](https://img.shields.io/badge/Jest-944058?style=for-the-badge&logo=jest&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Express.js](https://img.shields.io/badge/Express.js-E5E5EA?style=for-the-badge&logo=express&logoColor=black) ![MongoDB](https://img.shields.io/badge/MongoDB-138D4D?style=for-the-badge&logo=mongodb&logoColor=white)
+
 This was a team project which I have cloned to show here. We worked for 2 weeks in teams starting with a basic MERN stack template and starter code. The app had the functionality to signup and logon, but no other functionality. We were given tickets to work on to improve the functionality, including: posting both text and photos; uploading a profile picture; following friends; profile screen and feed screen. 
 
 ## Review of the project ##
