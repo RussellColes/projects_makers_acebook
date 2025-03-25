@@ -5,6 +5,11 @@
 
 This was a team project which I have cloned to show here. We worked for 2 weeks in teams starting with a basic MERN stack template and starter code. The app had the functionality to signup and logon, but no other functionality. We were given tickets to work on to improve the functionality, including: posting both text and photos; uploading a profile picture; following friends; profile screen and feed screen. 
 
+## Functionality of Final Product ##
+The app had sign up and login functionality. You could see your own personal details and feed on a profile page, as well as a feed of all of your friends' posts. Every user could add friends, post text and images and update their own profile including a profile picture. 
+
+I focused on image uploading during the first week and then worked in pair programming to help add the comment functionality.
+
 ## Review of the project ##
 Overall we were proud of the final result of the project. We created a functioning app in JavaScript / React / node.js following only 2 weeks of learning prior to starting this project. We had also never seen a MERN stack before - this was by far the most complex app we had ever been exposed to, so much of the first two days was spent getting our heads around the data flow through the application. Time was short and ultimately ran away with us. There are lots more aspects we would have liked to have implemented, and especially we would have liked to have done more testing to improve the coverage.
 
